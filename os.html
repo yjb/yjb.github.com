@@ -1,0 +1,371 @@
+<!doctype html>
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <meta name="viewport" content="width=device-width">
+
+   <title>OS</title>
+
+   <meta name="robots" content="noindex, nofollow">
+   <meta name="description" content="MetroUI-Web : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
+   <meta name="keywords" content="metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
+   <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
+   
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootstrap-responsive.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootmetro.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-tiles.css">
+   <link rel="stylesheet" type="text/css" href="content/css/bootmetro-charms.css">
+   <link rel="stylesheet" type="text/css" href="content/css/metro-ui-light.css">
+   <link rel="stylesheet" type="text/css" href="content/css/icomoon.css">
+   <link rel="stylesheet" type="text/css" href="content/css/demo.css">
+   <link rel="stylesheet" type="text/css" href="scripts/google-code-prettify/prettify.css" >
+
+   <link rel="shortcut icon" href="content/ico/favicon.ico">
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="content/ico/apple-touch-icon-144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="content/ico/apple-touch-icon-114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="content/ico/apple-touch-icon-72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="content/ico/apple-touch-icon-57-precomposed.png">
+  
+   <script src="scripts/modernizr-2.6.1.min.js"></script>
+
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3182578-6']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+   
+   <script type="text/javascript">
+   function bodyLoad(){
+	   var dateTime=new Date();
+	   var hh=dateTime.getHours();
+	   var mm=dateTime.getMinutes();
+	   var ss=dateTime.getSeconds();
+	   
+	   var MM=dateTime.getMonth()+1;  //因为1月这个方法返回为0，所以加1
+	   var dd=dateTime.getDate();
+
+	   var week=dateTime.getDay();
+
+	   var days=[ "日 ", "一 ", "二 ", "三 ", "四 ", "五 ", "六 ",] 
+
+	   $("h3").text(MM+"月"+dd+"日,"+"星期"+days[week]) ;
+	   $("h4").text(hh+"时"+mm+"分"+ss+"秒");
+
+	   setTimeout(bodyLoad,1000);
+	 }
+   </script>
+   
+</head>
+
+<body data-accent="blue">
+   <!-- Header================================================== -->
+   <header id="nav-bar" class="container-fluid">
+      <div class="row-fluid">
+         <div class="span8">
+            <div id="header-container">
+               <a id="backbutton" class="win-backbutton" href="http://www.hao123.com/"></a>
+               <h5>操作中心</h5>
+               <div class="dropdown">
+                  <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#">
+                     	开始
+                     <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                  <li><a href="http://www.iteye.com/" target="_blank">ITeye</a></li>
+                  <li><a href="http://www.csdn.net/" target="_blank">CSDN</a></li>
+                  <li><a href="http://www.microsoft.com/en-us/default.aspx" target="_blank">Microsoft</a></li>
+                  <li><a href="http://www.ibm.com/cn/zh/" target="_blank">IBM</a></li>
+                  <li><a href="http://www.oracle.com/cn/index.html" target="_blank">Oracle</a></li>
+                  <li><a href="http://www.adobe.com/cn/" target="_blank">Adobe</a></li>
+                  <li><a href="http://www8.hp.com/cn/zh/home.html" target="_blank">HP</a></li>
+                  <li><a href="http://www.sap.com/china/index.epx" target="_blank">SAP</a></li>
+                  <li><a href="http://cn.redhat.com/" target="_blank">Red Hat</a></li>
+                  <li><a href="http://www.apple.com.cn/" target="_blank">Apple</a></li>
+                  <li><a href="http://www.vmware.com/cn/" target="_blank">VMware</a></li>
+                  <li><a href="http://www.apache.org/" target="_blank">Apache</a></li>
+                  <li class="divider"></li>
+                  <li><a href="http://www.hao123.com/" target="_blank">Home</a></li>
+               </ul>
+            </div>
+            </div>
+         </div>
+         <div id="top-info" class="pull-right">
+         <a href="#" class="pull-left">
+            <div class="top-info-block">
+               <h3>FirstName</h3>
+               <h4>LastName</h4>
+            </div>
+            <div class="top-info-block">
+               <b class="icon-time"></b>
+            </div>
+         </a>
+         <hr class="separator pull-left"/>
+         <a id="settings" class="pull-left" href="#">
+            <b class="icon-settings"></b>
+         </a>
+      </div>
+   </div>
+   </header>
+   
+   <!-- Content================================================== -->
+   <div class="container-fluid">
+      <div class="row-fluid">
+         <div class="metro span12">
+            <div class="metro-sections">
+   
+               <div id="section1" class="metro-section tile-span-4">
+   
+                  <h2>软件技术类</h2>
+   
+                  <a class="tile wide imagetext bg-color-blueDark" href="http://www.iteye.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/iteye.png" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text4">ITeye Java编程 Spring框架 Ajax技术 agile敏捷软件开发 ruby on rails实践</div>
+                     </div>
+                     <div class="app-label">ITeye</div>
+                  </a>
+   
+                  <a class="tile wide imagetext wideimage bg-color-orange" href="http://www.infoq.com/cn" target="_blank">
+                     <img src="content/img/infoq.gif" alt=""/>
+                     <div class="textover-wrapper bg-color-blue">
+                        <div class="text2">促进软件开发领域知识与创新的传播</div>
+                     </div>
+                  </a>
+   
+                  <a class="tile app wide bg-color-greenDark" href="http://www.csdn.net/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/csdn.gif" alt=""/>
+                     </div>
+                     <div class="app-label">全球最大中文IT社区</div>
+                  </a>
+   
+                  <a class="tile app bg-color-purple" href="http://www.lotuschina.net/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/lotuschina.png" alt=""/>
+                     </div>
+                     <span class="app-label">Lotus中国</span>
+                  </a>
+   
+                  <a class="tile app bg-color-red" href="http://www.ibm.com/developerworks/cn/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/developerworks.gif" alt=""/>
+                     </div>
+                     <span class="app-label">IBM developerWorks</span>
+                  </a>
+   
+                  <a class="tile app bg-color-yellow" href="http://www.oschina.net/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/oschina.gif" alt=""/>
+                     </div>
+                     <span class="app-label">开源中国社区</span>
+                  </a>
+   
+                  <a class="tile app bg-color-blueDark" href="http://www.51cto.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/51cto.gif" alt=""/>
+                     </div>
+                     <span class="app-label">中国领先的IT技术网站</span>
+                  </a>
+                  
+                  <a class="tile app bg-color-darken" href="http://www.any-phone.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/yidongkaifawang.jpg" alt=""/>
+                     </div>
+                     <span class="app-label">移动开发网</span>
+                  </a>
+                  
+                  <a class="tile app bg-color-pink" href="http://www.china-cloud.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/chinacloud.png" alt=""/>
+                     </div>
+                     <span class="app-label">中国云计算第一门户</span>
+                  </a>
+   
+               </div>
+   
+               <div id="section2" class="metro-section tile-span-4">
+   
+                  <h2>日常生活类</h2>
+   
+                  <a class="tile wide imagetext bg-color-blue" href="http://www.360buy.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/360buy.png" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text">综合网购首选</div>
+                        <div class="text">正品行货</div>
+                        <div class="text">机打发票</div>
+                     </div>
+                     <span class="app-label">京东网上商城</span>
+                  </a>
+   
+                  <a class="tile wide imagetext bg-color-blueDark" href="http://www.cmbchina.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/zhaoshangyinhang.png" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text">China Merchants Bank</div>
+                        <div class="text">一网通</div>
+                        <div class="text">CMB</div>
+                        <div class="text">客户服务</div>
+                     </div>
+                     <span class="app-label">招商银行官方网站</span>
+                  </a>
+   
+                  <a class="tile app bg-color-orange" href="http://map.baidu.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/baidumap.png" alt="" />
+                     </div>
+                     <span class="app-label">百度地图</span>
+                  </a>
+   
+                  <a class="tile app bg-color-red" href="http://www.ctrip.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/ctrip.png" alt="" />
+                     </div>
+                     <span class="app-label">携程旅行网官网</span>
+                  </a>
+                  
+                  <a class="tile app bg-color-green" href="http://www.chinahr.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/chinahr.png" alt="" />
+                     </div>
+                     <span class="app-label">寻找最适合您的工作</span>
+                  </a>
+                  
+                  <a class="tile app bg-color-yellow" href="http://www.zol.com.cn/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/zol.png" alt="" />
+                     </div>
+                     <span class="app-label">中关村在线</span>
+                  </a>
+                  
+                  <a class="tile app bg-color-purple" href="http://xa.ganji.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/ganji.png" alt="" />
+                     </div>
+                     <span class="app-label">最大最全的分类信息网</span>
+                  </a>
+                  
+                  <a class="tile wide imagetext bg-color-pink" href="http://weibo.com/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/weibo.png" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text">随时随地分享身边的新鲜事儿</div>
+                        <div class="text">weibo.com</div>
+                     </div>
+                     <span class="app-label">新浪微博</span>
+                  </a>
+                  
+                  <a class="tile app bg-color-blueDark" href="http://www.12306.cn/mormhweb/" target="_blank">
+                     <div class="image-wrapper">
+                        <img src="content/img/12306.png" alt="" />
+                     </div>
+                     <span class="app-label">铁路客户服务中心</span>
+                  </a>
+   
+               </div>
+   
+               <div id="section3" class="metro-section tile-span-2">
+                  <h2>工作学习类</h2>
+                  <a class="tile tile-double bg-color-blue" href="https://mail.google.com/mail/" target="_blank">
+                     <div class="tile-icon-large">
+                        <img src="content/img/google.png" />
+                     </div>
+                     <span class="tile-label">来自 Google 的电子邮件</span>
+                  </a>
+				  <a class="tile bg-color-orange" href="http://mail.ntong.com/" target="_blank">
+                     <div class="tile-icon-large">
+                        <img src="content/img/corpease.jpg" />
+                     </div>
+                     <span class="tile-label">尚易电子邮局（ntong）</span>
+                  </a>
+                  <a class="tile bg-color-blueDark" href="http://mail.163.com/" target="_blank">
+                     <div class="tile-icon-large">
+                        <img src="content/img/163.gif" />
+                     </div>
+                     <span class="tile-label">163网易免费邮</span>
+                  </a>
+                  <a class="tile bg-color-red" href="http://mail.126.com/" target="_blank">
+                     <div class="tile-icon-large">
+                        <img src="content/img/126.gif" />
+                     </div>
+                     <span class="tile-label">126网易免费邮</span>
+                  </a>
+                  <a class="tile bg-color-green" href="http://mail.10086.cn/" target="_blank">
+                     <div class="tile-icon-large">
+                        <img src="content/img/139.png" />
+                     </div>
+                     <span class="tile-label">中国移动::139邮箱</span>
+                  </a>
+                  <a class="tile bg-color-yellow" href="http://www.renren.com/" target="_blank">
+                     <div class="tile-icon-large">
+                        <img src="content/img/renren.png" />
+                     </div>
+                     <span class="tile-label">人人网 校内是一个真实的社交网络，联络你和你周围的朋友</span>
+                  </a>
+               </div>
+   
+            </div>
+      
+         </div>
+      </div>
+   </div>
+   
+   <!-- Setting================================================== -->
+   <div id="charms" class="win-ui-dark">
+   
+      <div id="theme-charms-section" class="charms-section">
+         <div class="charms-header">
+            <a href="#" class="close-charms win-command">
+               <span class="win-commandimage win-commandring">&#xe05d;</span>
+            </a>
+            <h2>设置中心</h2>
+         </div>
+   
+         <div class="row-fluid">
+            <div class="span12">
+   
+               <form class="">
+                  <label for="win-theme-select">更换主题:</label>
+                  <select id="win-theme-select" class="">
+                     <option value="metro-ui-semilight">半光</option>
+                     <option value="metro-ui-light">光亮</option>
+                     <option value="metro-ui-dark">暗色</option>
+                  </select>
+               </form>
+   
+            </div>
+         </div>
+      </div>
+   
+   </div>
+
+   <script>window.jQuery || document.write("<script src='scripts/jquery-1.8.2.min.js'>\x3C/script>")</script>
+
+   <script type="text/javascript" src="scripts/google-code-prettify/prettify.js"></script>
+   <script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>
+   <script type="text/javascript" src="scripts/jquery.scrollTo.js"></script>
+   <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+   <script type="text/javascript" src="scripts/bootmetro.js"></script>
+   <script type="text/javascript" src="scripts/bootmetro-charms.js"></script>
+   <script type="text/javascript" src="scripts/demo.js"></script>
+   <script type="text/javascript" src="scripts/holder.js"></script>
+
+   <script type="text/javascript">
+      $(".metro").metro();
+   </script>
+   <script type="text/javascript">
+   	bodyLoad()
+   </script>
+</body>
+</html>
